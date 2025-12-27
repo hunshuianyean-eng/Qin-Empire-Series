@@ -1,13 +1,56 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <title>帝國外交部資訊網</title>
 
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        #searchInput { width: 100%; padding: 8px; margin-bottom: 20px; font-size: 16px; }
+        ul { list-style: none; padding-left: 0; }
+        li { margin-bottom: 8px; }
+        a { text-decoration: none; color: #1a0dab; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
 
+<body>
+<div class="container">
 
+    <h1>帝國外交部資訊網</h1>
+    <h2>外交部公告搜尋</h2>
 
+    <input type="text" id="searchInput" placeholder="輸入關鍵字搜尋公告..." onkeyup="searchTitles()">
 
-  </div>
+<ul id="titleList">
+        <li><a href="financial/異域貿易港口關稅調整與貨物申報規範.html">《異域貿易港口關稅調整與貨物申報規範》</a></li>
+        <li><a href="financial/帝國財政部對特殊自然災害補助方案最新通知.html">《帝國財政部對特殊自然災害補助方案最新通知》</a></li>
+        <li><a href="financial/帝國342年度國庫收入與支出概況報告.html">《帝國342年度國庫收入與支出概況報告》</a></li>
+        <li><a href="financial/跨境資源交換協定之財政影響分析報告.html">《跨境資源交換協定之財政影響分析報告》</a></li>
+        <li><a href="financial/全國工匠與商會稅務申報規定更新通告.html">《全國工匠與商會稅務申報規定更新通告》</a></li>
+        <li><a href="financial/關於外域貿易關稅標準修訂的正式通知.html">《關於外域貿易關稅標準修訂的正式通知》</a></li>
+        <li><a href="financial/關於帝國內部財政監察制度之最新修訂.html">《關於帝國內部財政監察制度之最新修訂》</a></li>
+        <li><a href="financial/因邊境戰亂調整關稅與國庫補助方案公告.html">《因邊境戰亂調整關稅與國庫補助方案公告》</a></li>
+        <li><a href="financial/針對手工工藝品與建材的稅率調整公告.html">《針對手工工藝品與建材的稅率調整公告》</a></li>
+        <li><a href="financial/跨境稀有原料交易財政監督與結算通知.html">《跨境稀有原料交易財政監督與結算通知》</a></li>
+        <li><a href="financial/全國主要城市稅收徵收與補助情況統計表.html">《全國主要城市稅收徵收與補助情況統計表》</a></li>
+        <li><a href="financial/帝國財政部對外域貿易與國庫收入綜合報告.html">《帝國財政部對外域貿易與國庫收入綜合報告》</a></li>
+        <li><a href="financial/年度財政規劃與稅收政策方向說明.html">《年度財政規劃與稅收政策方向說明》</a></li>
+    </ul>
+
+</div>
+
+<script>
+function searchTitles() {
+    const input = document.getElementById('searchInput').value.toLowerCase();
+    const items = document.querySelectorAll('#titleList li');
+
+    items.forEach(li => {
+        const text = li.innerText.toLowerCase();
+        li.style.display = text.includes(input) ? '' : 'none';
+    });
+}
+</script>
 
 </body>
 </html>
