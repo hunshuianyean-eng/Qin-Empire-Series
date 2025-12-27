@@ -1,5 +1,5 @@
 # Qin-Empire-Series
-作者做著玩的 :)
+原創官方網站，作者做著玩的 :)
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
