@@ -1,13 +1,9 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <title>帝國外交部資訊網</title>
-</head>
-<body>
-    <h1>外交部官方公告</h1>
-  
-<style>
+    <style>
         body { font-family: Arial, sans-serif; padding: 20px; }
         #searchInput { width: 100%; padding: 8px; margin-bottom: 20px; font-size: 16px; }
         ul { list-style: none; padding-left: 0; }
@@ -21,7 +17,7 @@
     <input type="text" id="searchInput" placeholder="輸入關鍵字搜尋公告..." onkeyup="searchTitles()">
 
     <ul id="titleList">
-         <li><a href="announcements/diplomatic/關於邊境巡禮道安全協議的公告.html">《關於邊境巡禮道安全協議的公告》</a></li>
+        <li><a href="announcements/diplomatic/關於邊境巡禮道安全協議的公告.html">《關於邊境巡禮道安全協議的公告》</a></li>
         <li><a href="announcements/diplomatic/關於外域領土邊境巡查的正式通告.html">《關於外域領土邊境巡查的正式通告》</a></li>
         <li><a href="announcements/diplomatic/帝國使節之旅：異域風情與交流紀實.html">《帝國使節之旅：異域風情與交流紀實》</a></li>
         <li><a href="announcements/diplomatic/回應外國貿易使節來訪的正式聲明.html">《回應外國貿易使節來訪的正式聲明》</a></li>
@@ -48,35 +44,8 @@
             for (let i = 0; i < items.length; i++) {
                 let a = items[i].getElementsByTagName('a')[0];
                 let text = a.innerText.toLowerCase();
-                if (text.includes(input)) {
-                    items[i].style.display = '';
-                } else {
-                    items[i].style.display = 'none';
-                }
+                items[i].style.display = text.includes(input) ? '' : 'none';
             }
         }
     </script>
-  <ul>
-       <li><a href="announcements/diplomatic/關於邊境巡禮道安全協議的公告.html">《關於邊境巡禮道安全協議的公告》</a></li>
-        <li><a href="announcements/diplomatic/關於外域領土邊境巡查的正式通告.html">《關於外域領土邊境巡查的正式通告》</a></li>
-        <li><a href="announcements/diplomatic/帝國使節之旅：異域風情與交流紀實.html">《帝國使節之旅：異域風情與交流紀實》</a></li>
-        <li><a href="announcements/diplomatic/回應外國貿易使節來訪的正式聲明.html">《回應外國貿易使節來訪的正式聲明》</a></li>
-        <li><a href="announcements/diplomatic/與星際和平公司合作框架初稿公開說明.html">《與星際和平公司合作框架初稿公開說明》</a></li>
-        <li><a href="announcements/diplomatic/外交部對邊境衝突事件的即時通報.html">《外交部對邊境衝突事件的即時通報》</a></li>
-        <li><a href="announcements/diplomatic/關於外域外交官員入境規定的修訂通知.html">《關於外域外交官員入境規定的修訂通知》</a></li>
-        <li><a href="announcements/diplomatic/與盟國簽署第15屆安全互助協定的公告.html">《與盟國簽署第15屆安全互助協定的公告》</a></li>
-        <li><a href="announcements/diplomatic/異域戰亂影響下的難民潮評估與應對措施.html">《異域戰亂影響下的難民潮評估與應對措施》</a></li>
-        <li><a href="announcements/diplomatic/跨境科研合作與人才互派方案說明.html">《跨境科研合作與人才互派方案說明》</a></li>
-        <li><a href="announcements/diplomatic/異域國家外交動向與對帝國影響評估.html">《異域國家外交動向與對帝國影響評估》</a></li>
-        <li><a href="announcements/diplomatic/帝國340年第二次源帝國外交書面資料.html">《帝國340年第二次源帝國外交書面資料》</a></li>
-        <li><a href="announcements/diplomatic/外交部對近期外域軍事行動與政局變化的分析.html">《外交部對近期外域軍事行動與政局變化的分析》</a></li>
-        <li><a href="announcements/diplomatic/帝國外交部：國際貿易局勢最新報告.html">《帝國外交部：國際貿易局勢最新報告》</a></li>
-        <li><a href="announcements/diplomatic/跨國資源交換協定及稅務影響說明.html">《跨國資源交換協定及稅務影響說明》</a></li>
-        <li><a href="announcements/diplomatic/帝國340年第一次源帝國外交書面資料.html">《帝國340年第一次源帝國外交書面資料》</a></li>
-    </ul>
 
-</body>
-  </div>
-
-</body>
-</html>
