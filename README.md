@@ -4,7 +4,7 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
-  <title>立志打造好玩的原創世界觀官方網站</title>
+  <title>原鈞帝國官方網站(虛構世界)</title>
 </head>
 <body>
   <h1>歡迎來到原鈞帝國官方網站</h1>
