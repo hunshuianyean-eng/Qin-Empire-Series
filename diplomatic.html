@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>帝國外交部資訊網</title>
-    <div class="container">
-    <h1>帝國外交部資訊網</h1>
+
     <style>
         body { font-family: Arial, sans-serif; padding: 20px; }
         #searchInput { width: 100%; padding: 8px; margin-bottom: 20px; font-size: 16px; }
@@ -14,11 +13,16 @@
         a:hover { text-decoration: underline; }
     </style>
 </head>
+
 <body>
+<div class="container">
+
+    <h1>帝國外交部資訊網</h1>
     <h2>外交部公告搜尋</h2>
+
     <input type="text" id="searchInput" placeholder="輸入關鍵字搜尋公告..." onkeyup="searchTitles()">
 
-    <ul id="titleList">
+<ul id="titleList">
         <li><a href="../announcements/diplomatic/關於邊境巡禮道安全協議的公告.html">《關於邊境巡禮道安全協議的公告》</a></li>
         <li><a href="../announcements/diplomatic/關於外域領土邊境巡查的正式通告.html">《關於外域領土邊境巡查的正式通告》</a></li>
         <li><a href="../announcements/diplomatic/帝國使節之旅：異域風情與交流紀實.html">《帝國使節之旅：異域風情與交流紀實》</a></li>
@@ -39,21 +43,19 @@
         <li><a href="../announcements/diplomatic/帝國340年第一次外國外交書面紀錄.html">《帝國340年第一次外國外交書面紀錄》</a></li>
     </ul>
 
-    <script>
-        function searchTitles() {
-            let input = document.getElementById('searchInput').value.toLowerCase();
-            let list = document.getElementById('titleList');
-            let items = list.getElementsByTagName('li');
+</div>
 
-            for (let i = 0; i < items.length; i++) {
-                let a = items[i].getElementsByTagName('a')[0];
-                let text = a.innerText.toLowerCase();
-                items[i].style.display = text.includes(input) ? '' : 'none';
-            }
-        }
-    </script>
+<script>
+function searchTitles() {
+    const input = document.getElementById('searchInput').value.toLowerCase();
+    const items = document.querySelectorAll('#titleList li');
 
-    </div>
+    items.forEach(li => {
+        const text = li.innerText.toLowerCase();
+        li.style.display = text.includes(input) ? '' : 'none';
+    });
+}
+</script>
+
 </body>
-    
 </html>
