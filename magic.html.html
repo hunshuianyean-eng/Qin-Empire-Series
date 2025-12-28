@@ -1,13 +1,64 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <title>帝國魔法研究部資訊網</title>
 
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        #searchInput { width: 100%; padding: 8px; margin-bottom: 20px; font-size: 16px; }
+        ul { list-style: none; padding-left: 0; }
+        li { margin-bottom: 8px; }
+        a { text-decoration: none; color: #1a0dab; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
 
+<body>
+<div class="container">
 
+    <h1>帝國魔法研究部資訊網</h1>
+    <h2>魔法研究部公告搜尋</h2>
 
+    <input type="text" id="searchInput" placeholder="輸入關鍵字搜尋公告..." onkeyup="searchTitles()">
 
-  </div>
+<ul id="titleList">
+        <li><a href="magic/關於近期發現可用於馴化烈火鷹之多項替代素材說明.html">《關於近期發現可用於馴化烈火鷹之多項替代素材說明》</a></li>
+        <li><a href="magic/副部長罷免後續處理事宜公告.html">《副部長罷免後續處理事宜公告》</a></li>
+        <li><a href="magic/關於近期國際閃電石價格上漲是否影響既有福利制度之公告.html">《關於近期國際閃電石價格上漲是否影響既有福利制度之公告》</a></li>
+        <li><a href="magic/與《魔法少女★NANAKO》聯動公益活動執行說明.html">《與《魔法少女★NANAKO》聯動公益活動執行說明》</a></li>
+        <li><a href="magic/與《魔法正太☆SATOKUN》聯動公益活動執行說明.html">《與《魔法正太☆SATOKUN》聯動公益活動執行說明》</a></li>
+        <li><a href="magic/第341屆帝國魔法部公職人員考核內容調整公告.html">《第341屆帝國魔法部公職人員考核內容調整公告》</a></li>
+        <li><a href="magic/關於光線螳螂於民生用途之最新科研成果彙報.html">《關於光線螳螂於民生用途之最新科研成果彙報》</a></li>
+        <li><a href="magic/關於尚未發行之新款帝國公共路燈燈芯是否符合現行規範之聲明.html">《關於尚未發行之新款帝國公共路燈燈芯是否符合現行規範之聲明》</a></li>
+        <li><a href="magic/帝國336年至帝國341年間申請財政部撥款補助內容總匯.html">《帝國336年至帝國341年間申請財政部撥款補助內容總匯》</a></li>
+        <li><a href="magic/近期帝國光系技能重大突破成果彙報.html">《近期帝國光系技能重大突破成果彙報》</a></li>
+        <li><a href="magic/新增可上市作為寵物或食用之物種研究彙報.html">《新增可上市作為寵物或食用之物種研究彙報》</a></li>
+        <li><a href="magic/全國工匠與商會稅務申報規定更新通告.html">《全國工匠與商會稅務申報規定更新通告》</a></li>
+        <li><a href="magic/帝國標準防護咒語對高階元素生物之有效性再評估.html">《帝國標準防護咒語對高階元素生物之有效性再評估》</a></li>
+        <li><a href="magic/夜光史萊姆於下水道系統中繁殖現象之處置方案.html">《夜光史萊姆於下水道系統中繁殖現象之處置方案》</a></li>
+        <li><a href="magic/帝國魔法部跨部門借調人員風險評估與管理辦法修訂.html">《帝國魔法部跨部門借調人員風險評估與管理辦法修訂》</a></li>
+        <li><a href="magic/帝國未登錄高智慧魔法物體暫行管理辦法.html">《帝國未登錄高智慧魔法物體暫行管理辦法》</a></li>
+        <li><a href="magic/關於研究助理於高危實驗中之保險適用範圍說明.html">《關於研究助理於高危實驗中之保險適用範圍說明》</a></li>
+        <li><a href="magic/金色穆娜草保存術式之技術迭代成果及外銷可行性初步評估.html">《金色穆娜草保存術式之技術迭代成果及外銷可行性初步評估》</a></li>
+        <li><a href="magic/高階魔導製品對外輸出限制調整及風險評估報告.html">《高階魔導製品對外輸出限制調整及風險評估報告》</a></li>
+        <li><a href="magic/低階元素齧獸侵農事件之成因分析與控制方案.html">《低階元素齧獸侵農事件之成因分析與控制方案》</a></li>
+        <li><a href="magic/金色穆娜草保存術式之技術迭代成果及外銷可行性初步評估.html">《金色穆娜草保存術式之技術迭代成果及外銷可行性初步評估》</a></li>
+    </ul>
+
+</div>
+
+<script>
+function searchTitles() {
+    const input = document.getElementById('searchInput').value.toLowerCase();
+    const items = document.querySelectorAll('#titleList li');
+
+    items.forEach(li => {
+        const text = li.innerText.toLowerCase();
+        li.style.display = text.includes(input) ? '' : 'none';
+    });
+}
+</script>
 
 </body>
 </html>
